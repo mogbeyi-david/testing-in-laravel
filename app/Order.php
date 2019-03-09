@@ -17,4 +17,14 @@ class Order extends Model
     {
         return $this->products;
     }
+
+    public function total()
+    {
+        $sum = 0;
+        foreach ($this->products as $product)
+        {
+            $sum += $product->getPrice();
+        }
+        return $sum;
+    }
 }
