@@ -8,7 +8,7 @@ class Order extends Model
 {
     protected $products = [];
 
-    public function add($product)
+    public function add(Product $product)
     {
         $this->products[] = $product;
     }

@@ -20,6 +20,6 @@ class OrderTest extends TestCase
         $order->add($firstProduct);
         $order->add($secondProduct);
 
-        $this->assertEquals(2, count($order->products()));
+        $this->assertCount(2, $order->products());
     }
 }
