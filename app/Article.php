@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    public function scopeTrending($query)
+    public function scopeTrending($query, $take = 5)
     {
-        return $query->orderBy('reads', 'desc')->get();
+        return $query->orderBy('reads', 'desc')->take($take)->get();
     }
 }
